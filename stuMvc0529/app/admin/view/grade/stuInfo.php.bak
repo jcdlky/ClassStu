@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <script src="public/js/jquery.min.js"></script>
+    <style>
+        body{
+            font-family: 微软雅黑;
+        }
+        span.namse {
+            color: #fff;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<?php include 'public/view/header.php' ?>
+<div class="container">
+    <div class="row">
+        <?php include 'public/view/left.php' ?>
+        <div class="col-lg-9">
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">班级</a></li>
+                <li class="active">学生资料</li>
+            </ol>
+            <div class="alert alert-danger" role="alert">查看学生详细资料</div>
+
+            <div class="panel panel-danger">
+
+                <ul class="list-group">
+                    <li class="list-group-item">学员ID：<?php echo $stuinfo['id'] ?></li>
+                    <li class="list-group-item">姓名：<?php echo $stuinfo['name'] ?></li>
+                    <li class="list-group-item">性别：<?php echo $stuinfo['sex'] ?></li>
+                    <li class="list-group-item">年龄：<?php echo $stuinfo['age'] ?></li>
+                    <li class="list-group-item">电话：<?php echo $stuinfo['cellphone'] ?></li>
+                    <li class="list-group-item">班级：<?php echo $stuinfo['gname'] ?></li>
+                    <li class="list-group-item">所在班级编号：<?php echo $stuinfo['gid'] ?></li>
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <?php include 'public/view/footer.php' ?>
+</body>
+</html>
